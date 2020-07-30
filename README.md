@@ -28,5 +28,5 @@ Implemented a basic dynamic rule enginee for online shoping cart application wit
 
 --> dotnet test
 
-https://github.com/Ashis27/eShopOnPromotionRuleEngine/blob/master/src/screenshot.png
+<img src="https://github.com/Ashis27/eShopOnPromotionRuleEngine/blob/master/src/screenshot.png" />
 
