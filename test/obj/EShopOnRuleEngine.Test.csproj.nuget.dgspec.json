@@ -4,14 +4,14 @@
     "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\test\\EShopOnRuleEngine.Test.csproj": {}
   },
   "projects": {
-    "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\test\\EShopOnRuleEngine.Test.csproj": {
+    "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\src\\EShopOnRuleEngine.ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\test\\EShopOnRuleEngine.Test.csproj",
-        "projectName": "EShopOnRuleEngine.Test",
-        "projectPath": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\test\\EShopOnRuleEngine.Test.csproj",
+        "projectUniqueName": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\src\\EShopOnRuleEngine.ConsoleApp.csproj",
+        "projectName": "EShopOnRuleEngine.ConsoleApp",
+        "projectPath": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\src\\EShopOnRuleEngine.ConsoleApp.csproj",
         "packagesPath": "C:\\Users\\mahapaa\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\test\\obj\\",
+        "outputPath": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,82 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\test\\EShopOnRuleEngine.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\test\\EShopOnRuleEngine.Test.csproj",
+        "projectName": "EShopOnRuleEngine.Test",
+        "projectPath": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\test\\EShopOnRuleEngine.Test.csproj",
+        "packagesPath": "C:\\Users\\mahapaa\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mahapaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\src\\EShopOnRuleEngine.ConsoleApp.csproj": {
+                "projectPath": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\src\\EShopOnRuleEngine.ConsoleApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoFixture.Xunit2": {
+              "target": "Package",
+              "version": "[4.13.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
@@ -69,6 +145,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
