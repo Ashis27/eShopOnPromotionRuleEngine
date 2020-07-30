@@ -1,5 +1,7 @@
-﻿using EShopOnRuleEngine.ConsoleApp.DTOs;
+﻿using EShopOnPromotionEngineeRule.API;
+using EShopOnRuleEngine.ConsoleApp.DTOs;
 using EShopOnRuleEngine.ConsoleApp.Interface;
+using EShopOnRuleEngine.ConsoleApp.Interface.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,17 +12,18 @@ namespace EShopOnRuleEngine.ConsoleApp.Infrastructure.Service
     public class CheckoutService : ICheckoutService
     {
         private ICartService _cartService;
-   
+        private IPromoRuleService _promoRuleService;
+        private PromoOfferManager _promoCalculator;
         private IProductService _productService;
 
         public CheckoutService(ICartService cartService,
-       
+            IPromoRuleService promoRuleService,
             IProductService productService)
         {
             _cartService = cartService;
-          
+            _promoRuleService = promoRuleService;
             _productService = productService;
-           
+            _promoCalculator = PromoOfferManager.Instance;
         }
 
         /// <summary>
@@ -41,11 +44,13 @@ namespace EShopOnRuleEngine.ConsoleApp.Infrastructure.Service
                 item.UnitPrice = products.First(p => p.SKU == item.SKU).Price;
             });
 
-        
+            var promoOffers = _promoRuleService.GetPromoRules();
+            var cartItemsWithOfferPrice = _promoCalculator.CalculateOfferPrice(_promoCalculator.ApplyPromoRule(cart.CartItems, promoOffers), promoOffers);
+           
             var cartDto = new CartDto
             {
                 CartId = !string.IsNullOrEmpty(cart.CartId) ? cart.CartId : Guid.NewGuid().ToString(),
-                CartItems = null
+                CartItems = cartItemsWithOfferPrice
             };
 
             return cartDto;
