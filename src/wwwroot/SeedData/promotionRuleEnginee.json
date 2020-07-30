@@ -47,13 +47,13 @@
     "promoRule": {
       "skUs": [ "D" ],
       "quantity": 1,
-      "isForDifferentItems": true,
+      "isForDifferentItems": false,
       "promoResult": {
         "offFixedPrice": 0.0,
         "offPercentage": 15.0
       }
     },
-    "validTill": "2020-08-29T00:00:00+05:30"
+    "validTill": "2020-07-29T00:00:00+05:30"
   },
   {
     "promotionOfferId": "5",

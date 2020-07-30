@@ -31,7 +31,7 @@ namespace EShopOnRuleEngine.ConsoleApp
                 GetActivePromototions(serviceProvider);
 
                 Console.WriteLine();
-                Console.WriteLine("Please add items to your cart(SKU Space Unit)");
+                Console.WriteLine("Please add items to your cart");
                 Console.WriteLine("------------------------------");
                 Console.WriteLine("** Press c to checkout **");
                 Console.WriteLine("** Press e to exit **");
@@ -95,7 +95,7 @@ namespace EShopOnRuleEngine.ConsoleApp
             List<CartItemDto> cartItems = new List<CartItemDto>();
             bool incorrectInput = false;
 
-            Console.WriteLine("Add Item:");
+            Console.WriteLine("Add Item (SKU Space Unit - ex A 9)");
             Console.WriteLine("Product \t Unit");
             while (true)
             {
@@ -109,11 +109,15 @@ namespace EShopOnRuleEngine.ConsoleApp
                 {
                     // checkout
                     var result = checkoutService.Checkout(new CartDto { CartId = Guid.NewGuid().ToString(), CartItems = cartItems });
-                    Console.WriteLine("SKU \t OfferPrice");
+                    Console.WriteLine("SKU \t OfferPrice(Rs)");
+                    int totalPrice = 0;
                     result.CartItems.ForEach(r =>
                     {
                         Console.WriteLine(r.SKU + "\t" + r.OfferPrice);
+                        totalPrice += Convert.ToInt32(r.OfferPrice);
                     });
+                    Console.WriteLine("-----------------------");
+                    Console.WriteLine("Total: " + "\t" + totalPrice);
                     break;
                 }
 
