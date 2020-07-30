@@ -116,16 +116,28 @@ namespace EShopOnRuleEngine.ConsoleApp
                     });
                     break;
                 }
+
                 var splittedInput = line.Split(" ");
+
                 if (splittedInput.Length < 2)
+                {
                     incorrectInput = true;
+                }
+
                 var productSku = splittedInput[0];
                 var quantity = Convert.ToInt32(splittedInput[1]);
-                var unitPrice = products
-                    .FirstOrDefault(p => p.SKU.ToLower() == productSku.ToLower())
-                    .Price;
-                CartItemDto item = new CartItemDto { SKU = productSku, Quantity = quantity, UnitPrice = unitPrice };
-                cartItems.Add(item);
+                var product = products.FirstOrDefault(p => p.SKU.ToLower() == productSku.ToLower());
+                if (product != null)
+                {
+                    CartItemDto item = new CartItemDto { SKU = productSku, Quantity = quantity, UnitPrice = product.Price };
+                    cartItems.Add(item);
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid product item - {productSku} - added to cart");
+                }
+                
+                
             }
             Console.ReadKey();
         }
