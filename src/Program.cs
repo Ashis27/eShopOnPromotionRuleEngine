@@ -125,18 +125,25 @@ namespace EShopOnRuleEngine.ConsoleApp
                 }
 
                 var productSku = splittedInput[0];
-                var quantity = Convert.ToInt32(splittedInput[1]);
                 var product = products.FirstOrDefault(p => p.SKU.ToLower() == productSku.ToLower());
+
                 if (product != null)
                 {
-                    CartItemDto item = new CartItemDto { SKU = productSku, Quantity = quantity, UnitPrice = product.Price };
-                    cartItems.Add(item);
+                    int productQuantity;
+
+                    if (int.TryParse(splittedInput[1], out productQuantity)){
+                        CartItemDto item = new CartItemDto { SKU = productSku, Quantity = productQuantity, UnitPrice = product.Price };
+                        cartItems.Add(item);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Invalid product quantity - {splittedInput[1]} - added to cart");
+                    }
                 }
                 else
                 {
                     Console.WriteLine($"Invalid product item - {productSku} - added to cart");
-                }
-                
+                } 
                 
             }
             Console.ReadKey();
