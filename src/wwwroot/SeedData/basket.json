@@ -1,0 +1,32 @@
+{
+  "cartId": "229d66c9-4cb5-442b-aa42-4cf719d1d6c8",
+  "cartItems": [
+    {
+      "sku": "A",
+      "unitPrice": 50.0,
+      "quantity": 5,
+      "offerPrice": 0.0,
+      "actualPrice": 250.0,
+      "promoApplied": false,
+      "promoId": null
+    },
+    {
+      "sku": "B",
+      "unitPrice": 30.0,
+      "quantity": 5,
+      "offerPrice": 0.0,
+      "actualPrice": 150.0,
+      "promoApplied": false,
+      "promoId": null
+    },
+    {
+      "sku": "C",
+      "unitPrice": 20.0,
+      "quantity": 1,
+      "offerPrice": 0.0,
+      "actualPrice": 20.0,
+      "promoApplied": false,
+      "promoId": null
+    }
+  ]
+}
