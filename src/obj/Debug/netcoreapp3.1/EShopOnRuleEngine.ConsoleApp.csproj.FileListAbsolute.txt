@@ -19,3 +19,4 @@ D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\src\obj\Debug\netcoreap
 D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\src\obj\Debug\netcoreapp3.1\EShopOnRuleEngine.ConsoleApp.RazorTargetAssemblyInfo.cache
 D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\src\obj\Debug\netcoreapp3.1\staticwebassets\EShopOnRuleEngine.ConsoleApp.StaticWebAssets.Manifest.cache
 D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\src\obj\Debug\netcoreapp3.1\staticwebassets\EShopOnRuleEngine.ConsoleApp.StaticWebAssets.xml
+D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\src\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
