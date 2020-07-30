@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EShopOnRuleEngine.ConsoleApp.Dtos
+namespace EShopOnRuleEngine.ConsoleApp.DTOs
 {
     public class ProductDto
     {

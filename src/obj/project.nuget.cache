@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "WWGSOyNpnUke7k7QPajOPD4t3xvG8bCfDZnDeBY29tIpyCtOf1GF98PrYANosVgXdNfdd4XsXgOwISC5vljUUg==",
+  "dgSpecHash": "85rzqR6fh9PfYvhAp8XRLgj7jLXlcJmRacwJBJsPnL2EJFTWFFml4uXM8E428wCTSyi9lEWigxXPWUdIbo+Wow==",
   "success": true,
   "projectFilePath": "D:\\Project\\eShopOnRuleEnginee\\eShopOnPromotionRuleEngine\\src\\EShopOnRuleEngine.ConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mahapaa\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.6\\microsoft.extensions.dependencyinjection.3.1.6.nupkg.sha512",
+    "C:\\Users\\mahapaa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.6\\microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\mahapaa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
