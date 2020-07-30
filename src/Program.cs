@@ -11,35 +11,55 @@ namespace EShopOnRuleEngine.ConsoleApp
     {
         static void Main(string[] args)
         {
-            //Added DI to create instance of all available services
-            var serviceCollection = new ServiceCollection();
-            serviceCollection.AddSingleton<IProductService, ProductService>();
-            serviceCollection.AddSingleton<ICartService, CartService>();
-            serviceCollection.AddSingleton<IPromoRuleService, PromoRuleService>();
-            var serviceProvider = serviceCollection.BuildServiceProvider();
-
-            Console.WriteLine("---------Available Products (Unit price for SKU IDs)---------");
-            Console.WriteLine("SKU \t Price");
-            var products = serviceProvider
-                .GetService<IProductService>()
-                .GetProductsFromStore();
-            products?.ForEach(product =>
+            try
             {
-                Console.WriteLine(product.SKU + "\t" + "Rs. " + product.Price);
-            });
+                //Added DI to create instance of all available services
+                var serviceCollection = new ServiceCollection();
+                serviceCollection.AddSingleton<IProductService, ProductService>();
+                serviceCollection.AddSingleton<ICartService, CartService>();
+                serviceCollection.AddSingleton<IPromoRuleService, PromoRuleService>();
+                var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            Console.WriteLine();
-            Console.WriteLine("---------Active Promotions-------");
-            var activePromoOffers = serviceProvider
-                .GetService<IPromoRuleService>()
-                .GetPromoRules()
-                .Where(promo => promo.ValidTill >= DateTime.Now)
-                .ToList();
-            activePromoOffers?.ForEach(promo =>
+                Console.WriteLine("---------Available Products (Unit price for SKU IDs)---------");
+                Console.WriteLine("SKU \t Price");
+                var products = serviceProvider
+                    .GetService<IProductService>()
+                    .GetProductsFromStore();
+                if (products != null && products.Count > 0)
+                {
+                    products?.ForEach(product =>
+                    {
+                        Console.WriteLine(product.SKU + "\t" + "Rs. " + product.Price);
+                    });
+                }
+                else
+                {
+                    Console.WriteLine("***No Active promotion available***");
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("---------Active Promotions-------");
+                var activePromoOffers = serviceProvider
+                    .GetService<IPromoRuleService>()
+                    .GetPromoRules()
+                    .Where(promo => promo.ValidTill >= DateTime.Now)
+                    .ToList();
+                if (activePromoOffers != null && activePromoOffers.Count > 0)
+                {
+                    activePromoOffers?.ForEach(promo =>
+                    {
+                        Console.WriteLine(promo.PromotionOfferDescription);
+                    });
+                }
+                else
+                {
+                    Console.WriteLine("***No Active promotion available***");
+                }
+            }
+            catch (Exception ex)
             {
-                Console.WriteLine(promo.PromotionOfferDescription);
-            });
-
+                Console.WriteLine("***Something went wrong. Please try agian***");
+            }
         }
     }
 }
