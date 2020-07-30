@@ -99,3 +99,9 @@ D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\obj\Debug\netcorea
 D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\bin\Debug\netcoreapp3.1\AutoFixture.dll
 D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\bin\Debug\netcoreapp3.1\AutoFixture.Xunit2.dll
 D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\bin\Debug\netcoreapp3.1\Fare.dll
+D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\bin\Debug\netcoreapp3.1\EShopOnRuleEngine.Test.pdb
+D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\bin\Debug\netcoreapp3.1\Castle.Core.dll
+D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\bin\Debug\netcoreapp3.1\Moq.dll
+D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\obj\Debug\netcoreapp3.1\EShopOnRuleEngine.Test.csproj.CoreCompileInputs.cache
+D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\obj\Debug\netcoreapp3.1\EShopOnRuleEngine.Test.dll
+D:\Project\eShopOnRuleEnginee\eShopOnPromotionRuleEngine\test\obj\Debug\netcoreapp3.1\EShopOnRuleEngine.Test.pdb
