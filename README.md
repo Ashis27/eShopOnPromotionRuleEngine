@@ -8,7 +8,6 @@ Implemented a basic dynamic rule enginee for online shoping cart application wit
 
 #Calculate total price with indivisual item discount price by using dynamic rule enginee.
 
-
 #Project Dependencies
 -----------------------
 
@@ -28,3 +27,6 @@ Implemented a basic dynamic rule enginee for online shoping cart application wit
 #For unit test case go to project test directory and run
 
 --> dotnet test
+
+https://github.com/Ashis27/eShopOnPromotionRuleEngine/blob/master/src/screenshot.png
+
